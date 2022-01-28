@@ -24,16 +24,16 @@ function App() {
   ]);
 
   const addTodo = (text) => {
-    // add new todo to the todos array (id, text, isCompleted)
-    
+    const newTodos = [...todos, {  id: uuidv4(), text: text, isCompleted: false }];
+    setTodos(newTodos);
   };
 
-  const completeTodo = (index) => {
+  const completeTodo = (id) => {
   
 
   };
 
-  const removeTodo = (index) => {
+  const removeTodo = (id) => {
    
 
   };
