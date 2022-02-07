@@ -29,13 +29,19 @@ function App() {
   };
 
   const completeTodo = (id) => {
+    const newTodos = [...todos];
+    const index = newTodos.map((todo)=>todo.id).indexOf(id);
+    newTodos[index].isCompleted =!(newTodos[index].isCompleted);
+    setTodos(newTodos);
   
-
+   
   };
 
   const removeTodo = (id) => {
-   
-
+  const newTodos = [...todos]; 
+  const index = newTodos.map((todo)=>todo.id).indexOf(id);
+  newTodos.splice(index,1);
+  setTodos(newTodos);
   };
 
   return (
